@@ -23,7 +23,7 @@ app.frame('/', (c) => {
 
   return c.res({
     action: '/choose',
-    image: `https://azure-ready-parakeet-471.mypinata.cloud/ipfs/QmNWZDzCQTHkkaU4nsTtToQSdXEipYXSN1qQUxCFjzwxoG`,
+    image: `https://gold-effective-barnacle-308.mypinata.cloud/ipfs/QmR9TGpAAtBZgbabj141QJeW73Le5yS4rv5GyoXaEDjemZ`,
     imageAspectRatio: '1:1',
     intents: [
       <Button value="start">Start</Button>,

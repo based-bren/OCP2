@@ -37,7 +37,7 @@ app.frame('/choose', (c) => {
 
   return c.res({
   //action: '/choose',
-  image: `https://azure-ready-parakeet-471.mypinata.cloud/ipfs/QmaKc5myG5QYZ9dchhUJD43Y7BGkw8jUJFQsEkSz5BXB4T`,
+  image: `https://gold-effective-barnacle-308.mypinata.cloud/ipfs/QmPKVMhyBtb64FfamQXb7EHDAACeEwN52gw7ovmETbu8ZL`,
   imageAspectRatio: '1:1',
   intents: [
     <Button.Transaction target="/freeMint">Free Mint</Button.Transaction>,

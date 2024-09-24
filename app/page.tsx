@@ -37,7 +37,7 @@ export default function Home() {
 
       <div className={styles.description}>
         <p>
-          Discover unique, adorable pups on the blockchain. Each OnChain Puppy
+          Discover unique, adorable pups @base. Each OnChain Puppy
           is crafted with love, ready for adoption. Join our growing community
           of puppy lovers today!
         </p>

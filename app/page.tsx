@@ -1,119 +1,58 @@
-import { getFrameMetadata } from 'frog/next'
-import type { Metadata } from 'next'
-import Image from 'next/image'
+import { getFrameMetadata } from "frog/next";
+import type { Metadata } from "next";
+import Image from "next/image";
 
-import styles from './page.module.css'
+import styles from "./page.module.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   const frameTags = await getFrameMetadata(
-    `${process.env.VERCEL_URL || 'http://localhost:3000'}/api`,
-  )
+    `https://onchainpuppiesmintframe.vercel.app/`
+  );
   return {
     other: frameTags,
-  }
+  };
 }
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>app/page.tsx</code>
-          </p>
-          <p>
-            Head to{' '}
-            <a
-              href="/api/dev"
-              style={{ display: 'inline', fontWeight: 'semibold' }}
-            >
-              <code className={styles.code}>localhost:3000/api</code>
-            </a>{' '}
-            for your frame endpoint.
-          </p>
-        </div>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+      <div className={styles.header}>
+        <h1>Welcome to OnChain Puppies!</h1>
+        <p className={styles.tagline}>
+          Adopt your OnChain Puppy NFT today and join the pack!
+        </p>
       </div>
 
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/onchain_puppies.gif"
+          alt="OnChain Puppy"
+          width={800}
+          height={800}
           priority
+          style={{ filter: "none" }}
         />
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <div className={styles.description}>
+        <p>
+          Discover unique, adorable pups on the blockchain. Each OnChain Puppy
+          is crafted with love, ready for adoption. Join our growing community
+          of puppy lovers today!
+        </p>
+      </div>
 
+      <div className={styles.cta}>
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
+          href="https://linktr.ee/OnChainVibe"
+          className={styles.linkButton}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          Explore More on Our Linktree!
         </a>
       </div>
     </main>
-  )
+  );
 }
